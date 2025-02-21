@@ -6,24 +6,18 @@ class Program
     {
         do
         {
-            Console.Clear(); // Clear console for better readability
-
-            // Get first number
+            Console.Clear();
+           
             double num1 = GetNumber("Enter the first number: ");
-
-            // Get second number
+            
             double num2 = GetNumber("Enter the second number: ");
 
-            // Get operator
             char operation = GetOperator();
 
-            // Perform calculation
             double result = Calculate(num1, num2, operation);
 
-            // Display result
             Console.WriteLine($"\nResult: {num1} {operation} {num2} = {result}");
 
-            // Ask if user wants to continue
             Console.Write("\nDo you want another calculation? (yes/no): ");
         }
         while (Console.ReadLine().Trim().ToLower() == "y");
